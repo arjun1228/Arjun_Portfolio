@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a14" />
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <title>Arjun Karlapati | Full Stack MERN Developer</title>
+
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('theme');
+          var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark) || !savedTheme) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text font-sans antialiased selection:bg-accent-violet selection:text-white transition-colors duration-300">
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: sans-serif; background: #0a0a14; color: #fff;">
+        <h1>Arjun Karlapati - Full Stack MERN Developer</h1>
+        <p>JavaScript is required to view the interactive portfolio experience.</p>
+        <p>Email: <a href="mailto:karlapatiarjun@gmail.com" style="color: #8b5cf6;">karlapatiarjun@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/arjun1228" style="color: #06b6d4;">github.com/arjun1228</a> | LinkedIn: <a href="https://www.linkedin.com/in/arjunkarlapati1228/" style="color: #06b6d4;">linkedin.com/in/arjunkarlapati1228</a></p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

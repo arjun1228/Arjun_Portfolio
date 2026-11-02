@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #f1f5f9;
+    --bg-card: #ffffff;
+    --border-color: rgba(139, 92, 246, 0.15);
+    --text-primary: #0f172a;
+    --text-muted: #64748b;
+    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  }
+
+  .dark {
+    --bg-primary: #0a0a14;
+    --bg-surface: #0f0f1e;
+    --bg-card: #141428;
+    --border-color: rgba(139, 92, 246, 0.18);
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a48;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Accent gradient utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+}
+
+.border-gradient {
+  border-image: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%) 1;
+}
+
+/* Radial Glow Backgrounds */
+.bg-radial-glow {
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+}
+
+.dark .bg-radial-glow {
+  background-image: 
+    radial-gradient(circle at 20% 15%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 85%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+}
+
+/* Section scroll margin offset for fixed navbar */
+section {
+  scroll-margin-top: 5rem;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
