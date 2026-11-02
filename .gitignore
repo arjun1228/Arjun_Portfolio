@@ -23,11 +23,14 @@ dist/
 # Environment files
 .env
 .env.local
+.env.production
 .env.development.local
 .env.test.local
 .env.production.local
 server/.env
+server/.env.production
 client/.env
+client/.env.production
 
 # Editor directories and files
 .vscode/
